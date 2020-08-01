@@ -64,7 +64,8 @@ int main(int, char**)
     IMGUI_CHECKVERSION();//In the file "imgui.h"
     //Use this before use ImGui
     ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGuiIO& io = ImGui::GetIO();
+    (void)io;
     //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     // Setup Dear ImGui style

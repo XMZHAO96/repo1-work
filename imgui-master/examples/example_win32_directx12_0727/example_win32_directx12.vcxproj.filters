@@ -24,13 +24,22 @@
     <ClInclude Include="D3D_sources_code.h">
       <Filter>sources</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\imgui\imconfig.h">
+      <Filter>sources\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imgui_internal.h">
+      <Filter>sources\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imstb_rectpack.h">
+      <Filter>sources\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imstb_textedit.h">
+      <Filter>sources\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imstb_truetype.h">
+      <Filter>sources\imgui</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\imgui.h">
-      <Filter>sources\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\imconfig.h">
-      <Filter>sources\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\imgui_internal.h">
       <Filter>sources\imgui</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,13 +62,13 @@
     <ClCompile Include="..\imgui_impl_dx12.cpp">
       <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\imgui.cpp">
-      <Filter>sources\imgui</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\imgui_widgets.cpp">
       <Filter>sources\imgui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\imgui_draw.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui.cpp">
       <Filter>sources\imgui</Filter>
     </ClCompile>
   </ItemGroup>
