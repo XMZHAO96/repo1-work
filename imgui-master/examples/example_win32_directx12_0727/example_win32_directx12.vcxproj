@@ -146,25 +146,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\stb-master\stb_image.h" />
-    <ClInclude Include="..\..\imgui.h" />
     <ClInclude Include="..\..\imgui\imconfig.h" />
+    <ClInclude Include="..\..\imgui\imgui.h" />
     <ClInclude Include="..\..\imgui\imgui_internal.h" />
     <ClInclude Include="..\..\imgui\imstb_rectpack.h" />
     <ClInclude Include="..\..\imgui\imstb_textedit.h" />
     <ClInclude Include="..\..\imgui\imstb_truetype.h" />
-    <ClInclude Include="..\imgui_impl_dx12.h" />
-    <ClInclude Include="..\imgui_impl_win32.h" />
-    <ClInclude Include="D3D_sources_code.h" />
+    <ClInclude Include="..\..\Rendering\D3D_sources_code.h" />
+    <ClInclude Include="..\..\Rendering\imgui_impl_dx12.h" />
+    <ClInclude Include="..\..\Rendering\imgui_impl_win32.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\imgui.cpp" />
-    <ClCompile Include="..\..\imgui_draw.cpp" />
-    <ClCompile Include="..\..\imgui_widgets.cpp" />
-    <ClCompile Include="..\imgui_impl_dx12.cpp" />
-    <ClCompile Include="..\imgui_impl_win32.cpp" />
-    <ClCompile Include="D3D_sources_code.cpp" />
+    <ClCompile Include="..\..\gui\main.cpp" />
+    <ClCompile Include="..\..\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\Rendering\D3D_sources_code.cpp" />
+    <ClCompile Include="..\..\Rendering\imgui_impl_dx12.cpp" />
+    <ClCompile Include="..\..\Rendering\imgui_impl_win32.cpp" />
     <ClCompile Include="get_files_name.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="wenli.cpp" />
   </ItemGroup>
   <ItemGroup>
