@@ -48,6 +48,9 @@
     <ClInclude Include="..\..\Rendering\D3D_sources_code.h">
       <Filter>sources\render</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\gui\GuiTool.h">
+      <Filter>sources\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="get_files_name.cpp">
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Rendering\D3D_sources_code.cpp">
       <Filter>sources\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\GuiTool.cpp">
+      <Filter>sources\gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

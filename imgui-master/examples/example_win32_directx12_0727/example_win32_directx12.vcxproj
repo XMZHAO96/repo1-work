@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\stb-master\stb_image.h" />
+    <ClInclude Include="..\..\gui\GuiTool.h" />
     <ClInclude Include="..\..\imgui\imconfig.h" />
     <ClInclude Include="..\..\imgui\imgui.h" />
     <ClInclude Include="..\..\imgui\imgui_internal.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="..\..\Rendering\imgui_impl_win32.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\gui\GuiTool.cpp" />
     <ClCompile Include="..\..\gui\main.cpp" />
     <ClCompile Include="..\..\imgui\imgui.cpp" />
     <ClCompile Include="..\..\imgui\imgui_draw.cpp" />

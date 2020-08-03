@@ -1,8 +1,14 @@
+#pragma once
 #include "./imgui/imgui.h"
 #include "./Rendering/imgui_impl_win32.h"
 #include "./Rendering/imgui_impl_dx12.h"
 #include "./Rendering/D3D_sources_code.h"
-#include "./gui/GuiTool.h"
+#include <d3d12.h>
+#include <dxgi1_4.h>
+#include <tchar.h>
+#include<io.h>
+#include<string>
+//#include "GuiTool.h"
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
@@ -20,7 +26,6 @@ using namespace std;
 #include <dxgidebug.h>
 #pragma comment(lib, "dxguid.lib")
 #endif
-
 
 // Data
 //static int const                    NUM_FRAMES_IN_FLIGHT = 3;
@@ -40,11 +45,8 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 //void getFiles(string path, vector<string>& files);
 //const char* filePath = "pics";
 //const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
-// Main code
-int main(int, char**)
-
+class GuiTool
 {
-    GuiTool* tool = new GuiTool();
-    tool->myGUI();
-    delete tool;
-}
+public:
+    int myGUI();
+};

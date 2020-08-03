@@ -16,7 +16,7 @@ void ResizeSwapChain(HWND hWnd, int width, int height);
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 */
 
-
+#pragma once
 #include "./imgui/imgui.h"
 #include "./Rendering/imgui_impl_win32.h"
 #include "./Rendering/imgui_impl_dx12.h"
