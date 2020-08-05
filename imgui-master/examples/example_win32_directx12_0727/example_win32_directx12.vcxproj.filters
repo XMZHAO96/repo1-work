@@ -51,6 +51,9 @@
     <ClInclude Include="..\..\gui\GuiTool.h">
       <Filter>sources\gui</Filter>
     </ClInclude>
+    <ClInclude Include="PlatformDisplayWindow.h">
+      <Filter>sources\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="get_files_name.cpp">
@@ -81,6 +84,9 @@
       <Filter>sources\render</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gui\GuiTool.cpp">
+      <Filter>sources\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformDisplayWindow.cpp">
       <Filter>sources\gui</Filter>
     </ClCompile>
   </ItemGroup>

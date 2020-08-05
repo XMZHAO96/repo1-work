@@ -39,7 +39,7 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 void getFiles(string path, vector<string>& files);
 const char* filePath = "pics";
 const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
-
+/*
 int GuiTool::Boot(HWND& hwnd, WNDCLASSEX& wc)
 {
     //Windows Language
@@ -58,58 +58,15 @@ int GuiTool::Boot(HWND& hwnd, WNDCLASSEX& wc)
     ::UpdateWindow(hwnd);
     // return 0;
 }
+*/
 
-
-int GuiTool::myGUI(HWND& hwnd, WNDCLASSEX& wc)
-{
-    //Windows Language
-    //WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("ImGui Example"), NULL };
-    //::RegisterClassEx(&wc);
-    //HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Dear ImGui DirectX12 Example"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
-
-    // Initialize Direct3D
-
-    //----------------------------------------------DX12------------------------------------------------------
-    //if (!CreateDeviceD3D(hwnd))
-    //{
-     //   CleanupDeviceD3D();
-    //    ::UnregisterClass(wc.lpszClassName, wc.hInstance);
-    //    return 1;
-   // }
-    //----------------------------------------------END-------------------------------------------------------
-    // Show the window
-    //::ShowWindow(hwnd, SW_SHOWDEFAULT);
-   // ::UpdateWindow(hwnd);
-    //initalD3D(hwnd);
-    //---------------------------------------------ImGui-----------------------------------------------------
-    // Setup Dear ImGui context
-    IMGUI_CHECKVERSION();//In the file "imgui.h"
-    //Use this before use ImGui
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
-    // Setup Dear ImGui style
-    ImGui::StyleColorsDark();
-    initalD3D(hwnd);
-    // Our state
+int GuiTool::myGUI()
+{    
     bool show_demo_window = true;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
     int my_image_width = 0;
-    int my_image_height = 0;
-    //  ID3D12Resource* my_texture = NULL;
-
-      // Get CPU/GPU handles for the shader resource view
-      // Normally your engine will have some sort of allocator for these - here we assume that there's an SRV descriptor heap in
-      // g_pd3dSrvDescHeap with at least two descriptors allocated, and descriptor 1 is unused
-     // UINT handle_increment = g_pd3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
-
-      // Load the texture from a file
-
-
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+    int my_image_height = 0;    
       // Main loop
     MSG msg;
     ZeroMemory(&msg, sizeof(msg));
@@ -274,7 +231,7 @@ int GuiTool::myGUI(HWND& hwnd, WNDCLASSEX& wc)
 
         testD3D(clear_color);
     }
-
+    
     WaitForLastSubmittedFrame();
     ImGui_ImplDX12_Shutdown();
     ImGui_ImplWin32_Shutdown();
@@ -287,12 +244,4 @@ int GuiTool::myGUI(HWND& hwnd, WNDCLASSEX& wc)
 
 }
 
-int GuiTool::End(HWND& hwnd, WNDCLASSEX& wc)
-{
-    CleanupDeviceD3D();
-    ::DestroyWindow(hwnd);
-    ::UnregisterClass(wc.lpszClassName, wc.hInstance);
-    // Create application window
-    return 0;
-}
 
