@@ -45,6 +45,7 @@ int main(int, char**)
 
 {
     GuiTool* tool = new GuiTool();
-    tool->myGUI();
-    delete tool;
+    tool->Boot(tool->hwnd, tool->wc);
+    tool->myGUI(tool->hwnd, tool->wc);
+    tool->End(tool->hwnd, tool->wc);
 }

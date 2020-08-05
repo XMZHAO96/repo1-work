@@ -48,5 +48,10 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 class GuiTool
 {
 public:
-    int myGUI();
+    int myGUI(HWND& hwnd, WNDCLASSEX& wc);
+    int Boot(HWND& hwnd, WNDCLASSEX& wc);
+    int End(HWND& hwnd, WNDCLASSEX& wc);
+
+    HWND hwnd;
+    WNDCLASSEX wc;
 };

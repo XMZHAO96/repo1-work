@@ -40,18 +40,12 @@ void getFiles(string path, vector<string>& files);
 const char* filePath = "pics";
 const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
 
-
-
-int GuiTool::myGUI()
+int GuiTool::Boot(HWND& hwnd, WNDCLASSEX& wc)
 {
     //Windows Language
-    WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("ImGui Example"), NULL };
+    wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("ImGui Example"), NULL };
     ::RegisterClassEx(&wc);
-    HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Dear ImGui DirectX12 Example"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
-
-    // Initialize Direct3D
-
-    //----------------------------------------------DX12------------------------------------------------------
+    hwnd = ::CreateWindow(wc.lpszClassName, _T("Dear ImGui DirectX12 Example"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
     if (!CreateDeviceD3D(hwnd))
     {
         CleanupDeviceD3D();
@@ -62,6 +56,31 @@ int GuiTool::myGUI()
     // Show the window
     ::ShowWindow(hwnd, SW_SHOWDEFAULT);
     ::UpdateWindow(hwnd);
+    // return 0;
+}
+
+
+int GuiTool::myGUI(HWND& hwnd, WNDCLASSEX& wc)
+{
+    //Windows Language
+    //WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("ImGui Example"), NULL };
+    //::RegisterClassEx(&wc);
+    //HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Dear ImGui DirectX12 Example"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
+
+    // Initialize Direct3D
+
+    //----------------------------------------------DX12------------------------------------------------------
+    //if (!CreateDeviceD3D(hwnd))
+    //{
+     //   CleanupDeviceD3D();
+    //    ::UnregisterClass(wc.lpszClassName, wc.hInstance);
+    //    return 1;
+   // }
+    //----------------------------------------------END-------------------------------------------------------
+    // Show the window
+    //::ShowWindow(hwnd, SW_SHOWDEFAULT);
+   // ::UpdateWindow(hwnd);
+    //initalD3D(hwnd);
     //---------------------------------------------ImGui-----------------------------------------------------
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();//In the file "imgui.h"
@@ -260,12 +279,20 @@ int GuiTool::myGUI()
     ImGui_ImplDX12_Shutdown();
     ImGui_ImplWin32_Shutdown();
     ImGui::DestroyContext();
-    CleanupDeviceD3D();
-    ::DestroyWindow(hwnd);
-    ::UnregisterClass(wc.lpszClassName, wc.hInstance);
+  //  CleanupDeviceD3D();
+  //  ::DestroyWindow(hwnd);
+   // ::UnregisterClass(wc.lpszClassName, wc.hInstance);
     // Create application window
     return 0;
 
 }
 
+int GuiTool::End(HWND& hwnd, WNDCLASSEX& wc)
+{
+    CleanupDeviceD3D();
+    ::DestroyWindow(hwnd);
+    ::UnregisterClass(wc.lpszClassName, wc.hInstance);
+    // Create application window
+    return 0;
+}
 
