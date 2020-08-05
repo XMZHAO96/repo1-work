@@ -54,6 +54,9 @@
     <ClInclude Include="PlatformDisplayWindow.h">
       <Filter>sources\gui</Filter>
     </ClInclude>
+    <ClInclude Include="MyGuiStructure.h">
+      <Filter>sources\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="get_files_name.cpp">
@@ -87,6 +90,9 @@
       <Filter>sources\gui</Filter>
     </ClCompile>
     <ClCompile Include="PlatformDisplayWindow.cpp">
+      <Filter>sources\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGuiStructure.cpp">
       <Filter>sources\gui</Filter>
     </ClCompile>
   </ItemGroup>

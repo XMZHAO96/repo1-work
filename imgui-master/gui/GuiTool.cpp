@@ -3,6 +3,7 @@
 #include "./Rendering/imgui_impl_dx12.h"
 #include "./Rendering/D3D_sources_code.h"
 #include "GuiTool.h"
+#include "example_win32_directx12_0727/MyGuiStructure.h"
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
@@ -21,24 +22,33 @@ using namespace std;
 #pragma comment(lib, "dxguid.lib")
 #endif
 
-// Data
-static int const                    NUM_FRAMES_IN_FLIGHT = 3;
-static FrameContext                 g_frameContext[NUM_FRAMES_IN_FLIGHT] = {};
-static UINT                         g_frameIndex = 0;
-static int const                    NUM_BACK_BUFFERS = 3;
-// Forward declarations of helper functions
-bool CreateDeviceD3D(HWND hWnd);
-void CleanupDeviceD3D();
-void CreateRenderTarget();
-void CleanupRenderTarget();
-void WaitForLastSubmittedFrame();
-FrameContext* WaitForNextFrameResources();
-void ResizeSwapChain(HWND hWnd, int width, int height);
-LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-//bool LoadTextureFromFile(const char* filename, ID3D12Device* d3d_device, D3D12_CPU_DESCRIPTOR_HANDLE srv_cpu_handle, ID3D12Resource** out_tex_resource, int* out_width, int* out_height);
-void getFiles(string path, vector<string>& files);
-const char* filePath = "pics";
-const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
+int GuiTool::myGui()
+{
+
+    // Main loop
+    MSG msg;
+    ZeroMemory(&msg, sizeof(msg));
+    while (msg.message != WM_QUIT)
+    {
+        if (::PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
+        {
+            ::TranslateMessage(&msg);
+            ::DispatchMessage(&msg);
+            continue;
+        }
+
+        // Start the Dear ImGui frame
+        MyGuiStructure* p_Gui = new  MyGuiStructure();
+        p_Gui->myGuiStructure();
+
+        testD3D(clear_color);
+    }
+
+
+
+    return 0;
+
+}
 /*
 int GuiTool::Boot(HWND& hwnd, WNDCLASSEX& wc)
 {
@@ -59,14 +69,10 @@ int GuiTool::Boot(HWND& hwnd, WNDCLASSEX& wc)
     // return 0;
 }
 */
-
-int GuiTool::myGUI()
+/*
+int GuiTool::myGui()
 {    
-    bool show_demo_window = true;
-    bool show_another_window = false;
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-    int my_image_width = 0;
-    int my_image_height = 0;    
+   
       // Main loop
     MSG msg;
     ZeroMemory(&msg, sizeof(msg));
@@ -232,16 +238,10 @@ int GuiTool::myGUI()
         testD3D(clear_color);
     }
     
-    WaitForLastSubmittedFrame();
-    ImGui_ImplDX12_Shutdown();
-    ImGui_ImplWin32_Shutdown();
-    ImGui::DestroyContext();
-  //  CleanupDeviceD3D();
-  //  ::DestroyWindow(hwnd);
-   // ::UnregisterClass(wc.lpszClassName, wc.hInstance);
-    // Create application window
+   
+
     return 0;
 
 }
 
-
+*/

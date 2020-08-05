@@ -48,7 +48,12 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 class GuiTool
 {
 public:
-    int myGUI();
+    int myGui();
+    bool show_demo_window;
+    bool show_another_window;
+    ImVec4 clear_color;
+    int my_image_width;
+    int my_image_height;
     //int Boot(HWND& hwnd, WNDCLASSEX& wc);
    // int End(HWND& hwnd, WNDCLASSEX& wc);
 };

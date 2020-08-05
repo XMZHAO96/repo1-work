@@ -4,6 +4,7 @@
 #include "./Rendering/D3D_sources_code.h"
 #include "./gui/GuiTool.h"
 #include "examples/example_win32_directx12_0727/PlatformDisplayWindow.h"
+#include "example_win32_directx12_0727/MyGuiStructure.h"
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
@@ -20,12 +21,16 @@ int main(int, char**)
 {
     PlatformDisplayWindow* window = new PlatformDisplayWindow();
     window->WindowSet(window->hwnd, window->wc);
-
+    MyGuiStructure* gui = new MyGuiStructure();
     GuiTool* tool = new GuiTool();
 
+    gui->myGuiSet();
+    while (1)
+    {
+        tool->myGui();
+    }
+    
 
-    tool->myGUI();
-
-
+    gui->myGuiEnd();
     window->WindowEnd(window->hwnd, window->wc);
 }
