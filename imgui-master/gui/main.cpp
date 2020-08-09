@@ -5,6 +5,7 @@
 #include "./gui/GuiTool.h"
 #include "examples/example_win32_directx12_0727/PlatformDisplayWindow.h"
 #include "example_win32_directx12_0727/MyGuiStructure.h"
+#include "example_win32_directx12_0727/VfsSys.h"
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
@@ -19,6 +20,7 @@ using namespace std;
 int main(int, char**)
 
 {
+    VfsSys();
     PlatformDisplayWindow* window = new PlatformDisplayWindow();
     window->WindowSet(window->hwnd, window->wc);
     MyGuiStructure* gui = new MyGuiStructure();

@@ -158,6 +158,8 @@
     <ClInclude Include="..\..\Rendering\imgui_impl_win32.h" />
     <ClInclude Include="MyGuiStructure.h" />
     <ClInclude Include="PlatformDisplayWindow.h" />
+    <ClInclude Include="vfs.h" />
+    <ClInclude Include="VfsSys.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\gui\GuiTool.cpp" />
@@ -171,6 +173,8 @@
     <ClCompile Include="get_files_name.cpp" />
     <ClCompile Include="MyGuiStructure.cpp" />
     <ClCompile Include="PlatformDisplayWindow.cpp" />
+    <ClCompile Include="vfs.cpp" />
+    <ClCompile Include="VfsSys.cpp" />
     <ClCompile Include="wenli.cpp" />
   </ItemGroup>
   <ItemGroup>

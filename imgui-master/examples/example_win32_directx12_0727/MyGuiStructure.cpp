@@ -25,7 +25,7 @@ using namespace std;
 
 void getFiles(string path, vector<string>& files);
 const char* filePath = "pics";
-const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
+//const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
 int MyGuiStructure::myGuiSet()
 {
     show_demo_window = true;
@@ -169,20 +169,20 @@ int MyGuiStructure::myGuiStructure()
                 "  \"-xxx\"     hide lines containing \"xxx\"");
             filter.Draw();
             //
-            vector<string> files2;
+           // vector<string> files2;
 
             //获取该路径下的所有文件  
-            getFiles(filePath2, files2);
+           // getFiles(filePath2, files2);
             //char str2[30];//
-            int size2 = files2.size();
+            //int size2 = files2.size();
 
 
             // int count2 = 1;
             // cout << size2 << endl;
 
-            for (int i = 0; i < IM_ARRAYSIZE(files2[i].c_str()); i++)
-                if (filter.PassFilter(files2[i].c_str()))
-                    ImGui::BulletText("%s", files2[i].c_str());
+          //  for (int i = 0; i < IM_ARRAYSIZE(files2[i].c_str()); i++)
+        //        if (filter.PassFilter(files2[i].c_str()))
+         //           ImGui::BulletText("%s", files2[i].c_str());
         }
 
         ImGui::End();

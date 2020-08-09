@@ -57,6 +57,12 @@
     <ClInclude Include="MyGuiStructure.h">
       <Filter>sources\gui</Filter>
     </ClInclude>
+    <ClInclude Include="vfs.h">
+      <Filter>sources\render</Filter>
+    </ClInclude>
+    <ClInclude Include="VfsSys.h">
+      <Filter>sources\render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="get_files_name.cpp">
@@ -94,6 +100,12 @@
     </ClCompile>
     <ClCompile Include="MyGuiStructure.cpp">
       <Filter>sources\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="vfs.cpp">
+      <Filter>sources\render</Filter>
+    </ClCompile>
+    <ClCompile Include="VfsSys.cpp">
+      <Filter>sources\render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
