@@ -156,6 +156,7 @@
     <ClInclude Include="..\..\Rendering\D3D_sources_code.h" />
     <ClInclude Include="..\..\Rendering\imgui_impl_dx12.h" />
     <ClInclude Include="..\..\Rendering\imgui_impl_win32.h" />
+    <ClInclude Include="makefile.h" />
     <ClInclude Include="MyGuiStructure.h" />
     <ClInclude Include="PlatformDisplayWindow.h" />
     <ClInclude Include="vfs.h" />
@@ -170,7 +171,9 @@
     <ClCompile Include="..\..\Rendering\D3D_sources_code.cpp" />
     <ClCompile Include="..\..\Rendering\imgui_impl_dx12.cpp" />
     <ClCompile Include="..\..\Rendering\imgui_impl_win32.cpp" />
+    <ClCompile Include="getfiles.cpp" />
     <ClCompile Include="get_files_name.cpp" />
+    <ClCompile Include="makefile.cpp" />
     <ClCompile Include="MyGuiStructure.cpp" />
     <ClCompile Include="PlatformDisplayWindow.cpp" />
     <ClCompile Include="vfs.cpp" />

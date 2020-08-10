@@ -5,10 +5,12 @@
 #include<fstream>
 #include<conio.h>
 #include<iostream>
-
+#include<vector>
+#include<string>
 #include"vfs.h"
 
 using namespace std;
+
 
 vfs::vfs(){
 	ifstream in_stream;
@@ -138,30 +140,53 @@ void vfs::s_Cd(char *dir){
 
 
 
-void vfs::dir(int t){
-	if(t==-1){
-		return;
+char* vfs::dir(int t,int index)
+{
+    std::vector<std::string>list;
+    char* combo[39];
+    char* temp = new char[39];
+    string array;
+    int i = 0;
+    if(t==-1){
+		return 0;
 	}
 	else{
 		int j=node[t].parent;
-		if(node[t].flag==1){
-			cout<<"<"<<node[t].path<<"> "<<node[j].name<<" "<<"includes directory:"<<node[t].name<<endl;
-		}
-		else{
-			cout<<"<"<<node[t].path<<"> "<<node[j].name<<" "<<"includes file: "<< node[t].name<<endl; }
-		dir(node[t].right);
-		dir(node[t].left);
+        
+		//if(node[t].flag==1)
+      //  {
+			//cout<<"<"<<node[t].path<<"> "<<node[j].name<<" "<<"includes directory:"<<node[t].name<<endl;
+         //  list.push_back(node[t].path);
+           
+      //  }
+		//else
+      //  {                                  
+       // }
+       // cout << "<" << node[t].path << "> " << node[j].name << " " << "includes file: " << node[t].name << endl;
+        ofstream out1("output.txt",ios::app);
+        out1 << "<" << node[t].path << "> " << node[j].name << " " << "includes file: " << node[t].name << endl;
+        ofstream out2("output_file.txt", ios::app);
+        out2  << node[t].name << endl;
+        index++;
+  
+		dir(node[t].right,index);
+
+        
 	}
+;
+    
+    return temp;
+   
 }
 
-void vfs::s_Dir(int t){
+char* vfs::s_Dir(int t){
 	if(node[t].left==-1){
 		cout<<endl<<node[t].name<<" is empty"<<endl<<endl;
-		return;
+		return "no";
 	}
 	else{
-		dir(node[t].left);
-		return;
+		dir(node[t].left,0);
+		return dir(node[t].left,0);
 	}
 }
 

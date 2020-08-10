@@ -53,6 +53,8 @@ void ResizeSwapChain(HWND hWnd, int width, int height);
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 bool LoadTextureFromFile(const char* filename, ID3D12Device* d3d_device, D3D12_CPU_DESCRIPTOR_HANDLE srv_cpu_handle, ID3D12Resource** out_tex_resource, int* out_width, int* out_height);
 void getFiles(string path, vector<string>& files);
+void getfilesfun(string path, vector<string>& files);
+string ReadLine(char* filename, int line);
 //const char* filePath = "C:\\Users\\zhao_\\Pictures\\imgui-master\\examples\\example_win32_directx12_0725\\pics";
 //string iPos = "C:\\Users\\zhao_\\Pictures\\imgui-master\\examples\\example_win32_directx12_0725";
 ID3D12Resource* my_texture = NULL;

@@ -1,0 +1,7 @@
+<root/pics\qingshiyuhua1.j> root includes file: pics\qingshiyuhua1.j
+<root/pics\qingshiyuhua2.j> root includes file: pics\qingshiyuhua2.j
+<root/pics\shiguiliuxing1.> root includes file: pics\shiguiliuxing1.
+<root/pics\shiguiliuxing2.> root includes file: pics\shiguiliuxing2.
+<root/pics\zhangzhongxing1> root includes file: pics\zhangzhongxing1
+<root/res\magic\hazzah\wow> root includes file: res\magic\hazzah\wow
+<root/res\magic\mypassword> root includes file: res\magic\mypassword

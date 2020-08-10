@@ -1,0 +1,7 @@
+pics\qingshiyuhua1.j
+pics\qingshiyuhua2.j
+pics\shiguiliuxing1.
+pics\shiguiliuxing2.
+pics\zhangzhongxing1
+res\magic\hazzah\wow
+res\magic\mypassword

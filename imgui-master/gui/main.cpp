@@ -6,6 +6,8 @@
 #include "examples/example_win32_directx12_0727/PlatformDisplayWindow.h"
 #include "example_win32_directx12_0727/MyGuiStructure.h"
 #include "example_win32_directx12_0727/VfsSys.h"
+#include "example_win32_directx12_0727/vfs.h"
+#include "example_win32_directx12_0727/makefile.h"
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
@@ -17,10 +19,22 @@ using namespace std;
 
 
 
+
+
+
+
 int main(int, char**)
 
 {
-    VfsSys();
+
+    
+   // VfsSys();
+
+   // cout << filestxt_[1] << endl;
+
+   // vector<string> files;
+
+   // getfilesfun("output_file.txt", files);
     PlatformDisplayWindow* window = new PlatformDisplayWindow();
     window->WindowSet(window->hwnd, window->wc);
     MyGuiStructure* gui = new MyGuiStructure();
@@ -36,3 +50,4 @@ int main(int, char**)
     gui->myGuiEnd();
     window->WindowEnd(window->hwnd, window->wc);
 }
+

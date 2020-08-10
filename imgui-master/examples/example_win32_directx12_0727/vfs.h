@@ -30,7 +30,7 @@ public:
 	~vfs();
 	void s_Command(char* command);	 //system commands
 	void s_Cd(char* dir);			 //goto directory "dir"
-	void s_Dir(int t);	
+	char* s_Dir(int t);	
 	void s_Dir2(char *name);
 	void s_ShowDir(char *line);
 	void s_Createdir(char* name);	 //create folder under current directory with an input name
@@ -47,7 +47,8 @@ public:
 	void s_WriteFile(char *name);    //add content to existing files/
 	bool FindDir(int t, char* name);
 	bool FindFile(int t, char* name);
-	void dir(int t);
+	char* dir(int t,int index);
+
 	void nreset(int t);
 	bool F_Exist(int t, char *name);
 	void childdel(int t);

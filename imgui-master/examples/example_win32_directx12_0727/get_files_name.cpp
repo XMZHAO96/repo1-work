@@ -32,4 +32,3 @@ void getFiles(string path, vector<string>& files)
         _findclose(hFile);
     }
 }
-

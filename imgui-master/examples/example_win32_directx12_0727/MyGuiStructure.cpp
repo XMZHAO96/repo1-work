@@ -25,6 +25,7 @@ using namespace std;
 
 void getFiles(string path, vector<string>& files);
 const char* filePath = "pics";
+const char* filePathtxt = "output_file.txt";
 //const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
 int MyGuiStructure::myGuiSet()
 {
@@ -38,6 +39,7 @@ int MyGuiStructure::myGuiSet()
 
 int MyGuiStructure::myGuiStructure()
 {
+
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
     show_demo_window = true;
@@ -127,6 +129,7 @@ int MyGuiStructure::myGuiStructure()
         }
         if (!ImGui::CollapsingHeader("Search"))
         {
+            
             static ImGuiTextFilter filter;
             ImGui::Text("Files usage:\n"
                 "  \"\"         display all lines\n"
@@ -135,18 +138,33 @@ int MyGuiStructure::myGuiStructure()
                 "  \"-xxx\"     hide lines containing \"xxx\"");
             filter.Draw();
             //
-            vector<string> files;
-
-            //获取该路径下的所有文件  
-            getFiles(filePath, files);
-            //char str2[30];//
-            int size = files.size();
-            // int count2 = 1;
-            // cout << size2 << endl;
-            for (int i = 0; i < IM_ARRAYSIZE(files[i].c_str()); i++)
-                if (filter.PassFilter(files[i].c_str()))
-                    ImGui::BulletText("%s", files[i].c_str());
-
+           vector<string> files;
+          // ImGui::BulletText("charr");
+           // getfilesfun(filePathtxt, files3);
+           // int size2 = files3.size();
+            //int count2 = 1;
+           // cout << size2 << endl;
+           // vector<string> files;
+            //string filestemp;
+           // for (int j = 1; j < 3; j++)
+           // {
+              //  files3[j] = ReadLine("output_file.txt", j);
+            //}
+                     
+           // getFiles(filePath, files);                    
+           //ImGui::BulletText("%s", Path1);
+           
+          //  for (int i = 0; i < IM_ARRAYSIZE(files[i].c_str()); i++)
+          //      if (filter.PassFilter(files[i].c_str()))
+          //          ImGui::BulletText("%s", files[i].c_str());
+           string filestemp;
+         //  filestemp = ReadLine("output_file.txt", 1);
+           
+           
+           for (int i = 0; i < 7; i++)
+                     if (i<7)
+                         ImGui::BulletText(ReadLine("output_file.txt", i).c_str());
+        
         }
 
         ImGui::End();
