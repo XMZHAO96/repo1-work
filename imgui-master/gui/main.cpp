@@ -20,21 +20,14 @@ using namespace std;
 
 
 
-
-
-
 int main(int, char**)
 
 {
 
-    
+   //-----------------------------------构建虚拟文件夹-----------------------------------------
    // VfsSys();
-
-   // cout << filestxt_[1] << endl;
-
-   // vector<string> files;
-
-   // getfilesfun("output_file.txt", files);
+   //----------------------------------------end-----------------------------------------------
+  
     PlatformDisplayWindow* window = new PlatformDisplayWindow();
     window->WindowSet(window->hwnd, window->wc);
     MyGuiStructure* gui = new MyGuiStructure();

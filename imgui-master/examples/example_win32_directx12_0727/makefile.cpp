@@ -21,7 +21,7 @@
 #include "makefile.h"
 using namespace std;
 
-
+//----------------------------------把虚拟文件夹解析后的信息存入文件---------------------
 vector<string> makefile()
 {
     vector<string> filestxt;

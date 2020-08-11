@@ -28,7 +28,7 @@ using namespace std;
 #endif
 
 
-
+//--------------------调用win32和dx12生成窗口-------------------------------------------------
 
 int PlatformDisplayWindow::WindowSet(HWND& hwnd, WNDCLASSEX& wc)
 {

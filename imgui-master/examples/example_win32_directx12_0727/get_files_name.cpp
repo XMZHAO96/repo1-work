@@ -5,7 +5,7 @@
 using namespace std;
 
 
-
+//-----------------------------------获取磁盘目录的文件信息------------------------------------
 void getFiles(string path, vector<string>& files)
 {
     //文件句柄  

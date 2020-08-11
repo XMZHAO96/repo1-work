@@ -27,7 +27,7 @@ using namespace std;
 #pragma comment(lib, "dxguid.lib")
 #endif
 
-
+//---------------------------------------------ÉùÃ÷---------------------------------------
 class PlatformDisplayWindow
 {
 public:

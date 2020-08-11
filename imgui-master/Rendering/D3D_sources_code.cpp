@@ -22,7 +22,7 @@ using namespace std;
 #include <dxgidebug.h>
 #pragma comment(lib, "dxguid.lib")
 #endif
-
+//--------------------------------------dx12部分的函数-------------------------------------------
 // Data
 static int const                    NUM_FRAMES_IN_FLIGHT = 3;
 static FrameContext                 g_frameContext[NUM_FRAMES_IN_FLIGHT] = {};

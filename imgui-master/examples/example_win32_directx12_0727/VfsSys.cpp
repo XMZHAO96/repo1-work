@@ -7,7 +7,7 @@
 #include "example_win32_directx12_0727/vfs.h"
 #include "Rendering/D3D_sources_code.h"
 
-
+//---------------------------------------在这里生成了虚拟的文件夹root--------------------
 //const char* filePath2 = "C:\\Users\\zhao_\\Pictures\\imgui-master";
 const char* filePath2 = "pics";
 const char* filePath3 = "res";

@@ -22,7 +22,7 @@ using namespace std;
 #pragma comment(lib, "dxguid.lib")
 #endif
 
-
+//-------------------------------------这个文件写了imgui框架各部分的构造------------------------
 void getFiles(string path, vector<string>& files);
 const char* filePath = "pics";
 const char* filePathtxt = "output_file.txt";
@@ -139,31 +139,13 @@ int MyGuiStructure::myGuiStructure()
             filter.Draw();
             //
            vector<string> files;
-          // ImGui::BulletText("charr");
-           // getfilesfun(filePathtxt, files3);
-           // int size2 = files3.size();
-            //int count2 = 1;
-           // cout << size2 << endl;
-           // vector<string> files;
-            //string filestemp;
-           // for (int j = 1; j < 3; j++)
-           // {
-              //  files3[j] = ReadLine("output_file.txt", j);
-            //}
-                     
-           // getFiles(filePath, files);                    
-           //ImGui::BulletText("%s", Path1);
-           
-          //  for (int i = 0; i < IM_ARRAYSIZE(files[i].c_str()); i++)
-          //      if (filter.PassFilter(files[i].c_str()))
-          //          ImGui::BulletText("%s", files[i].c_str());
+          
            string filestemp;
-         //  filestemp = ReadLine("output_file.txt", 1);
-           
+
            
            for (int i = 0; i < 7; i++)
                      if (i<7)
-                         ImGui::BulletText(ReadLine("output_file.txt", i).c_str());
+                         ImGui::BulletText(ReadLine("output.txt", i).c_str());
         
         }
 
@@ -185,22 +167,7 @@ int MyGuiStructure::myGuiStructure()
                 "  \"xxx\"      display lines containing \"xxx\"\n"
                 "  \"xxx,yyy\"  display lines containing \"xxx\" or \"yyy\"\n"
                 "  \"-xxx\"     hide lines containing \"xxx\"");
-            filter.Draw();
-            //
-           // vector<string> files2;
-
-            //获取该路径下的所有文件  
-           // getFiles(filePath2, files2);
-            //char str2[30];//
-            //int size2 = files2.size();
-
-
-            // int count2 = 1;
-            // cout << size2 << endl;
-
-          //  for (int i = 0; i < IM_ARRAYSIZE(files2[i].c_str()); i++)
-        //        if (filter.PassFilter(files2[i].c_str()))
-         //           ImGui::BulletText("%s", files2[i].c_str());
+            filter.Draw();          
         }
 
         ImGui::End();
